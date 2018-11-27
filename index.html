@@ -45,13 +45,6 @@
               </select>
             </p>
             <p>
-              <label for="number">
-                <span>Card number:</span>
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-                <input type="number" id="number" name="cardnumber">
-            </p>
-            <p>
               <label for="name">
                 <span>Vardas: </span>
                 <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
@@ -70,7 +63,224 @@
                 <span>Gatvė, namo(buto) nr.: </span>
                 <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
               </label>
-              <input type="text" id="street" name="street">
+              <input type="text" id="street" class="left-input" name="street">
+              <input type="text" id="house" class="right-input" name="house">
+            </p>
+            <p>
+              <label for="postal">
+                <span>Pašto kodas: </span>
+                <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
+              </label>
+              <input type="text" id="postal" class="left-input" name="postal">
+              <a href="https://post.lt/lt/pagalba/pasto-kodu-paieska" target="_blank">Pašto kodo paieška</a>
+            </p>
+            <p>
+              <label for="city">
+                <span>Miestas: </span>
+                <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
+              </label>
+              <input type="text" id="city" class="left-input" name="city">
+            </p>
+            <p>
+              <label for="sex">
+                <span>Šalis:</span>
+                <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
+              </label>
+              <select id="sex" name="sex">
+                <option value="551" class="selectf"  code="" >-</option>
+                <option value="550" class="selectf"  code="" >Botsvana</option>
+                <option value="549" class="selectf"  code="" >Bosnija ir Hercegovina</option>
+                <option value="548" class="selectf"  code="" >Bolivija</option>
+                <option value="547" class="selectf"  code="" >Butanas </option>
+                <option value="545" class="selectf"  code="" >Beninas </option>
+                <option value="544" class="selectf"  code="" >Belizas </option>
+                <option value="543" class="selectf"  code="" >Belgija </option>
+                <option value="542" class="selectf"  code="" >Baltarusija</option>
+                <option value="540" class="selectf"  code="" >Diego Garsija </option>
+                <option value="539" class="selectf"  code="" >Bangladešas</option>
+                <option value="538" class="selectf"  code="" >Bahreinas </option>
+                <option value="536" class="selectf"  code="" >Azerbaidžanas</option>
+                <option value="537" class="selectf"  code="" >Bahamai</option>
+                <option value="535" class="selectf"  code="" >Austrija</option>
+                <option value="533" class="selectf"  code="" >Australija</option>
+                <option value="530" class="selectf"  code="" >Armėnija </option>
+                <option value="529" class="selectf"  code="" >Argentina </option>
+                <option value="526" class="selectf"  code="" >Angola</option>
+                <option value="525" class="selectf"  code="" >Andora</option>
+                <option value="523" class="selectf"  code="" >Alžyras</option>
+                <option value="522" class="selectf"  code="" >Albanija</option>
+                <option value="520" class="selectf"  code="" >Zimbabvė </option>
+                <option value="518" class="selectf"  code="" >Zambija </option>
+                <option value="517" class="selectf"  code="" >Jemenas </option>
+                <option value="514" class="selectf"  code="" >Vietnamas </option>
+                <option value="513" class="selectf"  code="" >Venesuela </option>
+                <option value="512" class="selectf"  code="" >Vatikanas </option>
+                <option value="511" class="selectf"  code="" >Vanuatu </option>
+                <option value="510" class="selectf"  code="" >Uzbekistanas</option>
+                <option value="509" class="selectf"  code="" >Urugvajus </option>
+                <option value="506" class="selectf"  code="" >JAV</option>
+                <option value="505" class="selectf"  code="" >Didžioji Britanija</option>
+                <option value="503" class="selectf"  code="" >Ukraina </option>
+                <option value="504" class="selectf"  code="" >Jungtiniai Arabų Emyratai</option>
+                <option value="502" class="selectf"  code="" >Uganda</option>
+                <option value="501" class="selectf"  code="" >Tuvalus </option>
+                <option value="499" class="selectf"  code="" >Turkmėnija </option>
+                <option value="498" class="selectf"  code="" >Turkija </option>
+                <option value="497" class="selectf"  code="" >Tunisas </option>
+                <option value="489" class="selectf"  code="" >Tanzanija </option>
+                <option value="490" class="selectf"  code="" >Tailandas </option>
+                <option value="488" class="selectf"  code="" >Tadžikija</option>
+                <option value="487" class="selectf"  code="" >Taivanas</option>
+                <option value="486" class="selectf"  code="" >Sirija</option>
+                <option value="485" class="selectf"  code="" >Šveicarija </option>
+                <option value="484" class="selectf"  code="" >Švedija</option>
+                <option value="483" class="selectf"  code="" >Svazilendas </option>
+                <option value="482" class="selectf"  code="" >Surinamas </option>
+                <option value="480" class="selectf"  code="" >Šri Lanka</option>
+                <option value="481" class="selectf"  code="" >Sudanas </option>
+                <option value="479" class="selectf"  code="" >Ispanija</option>
+                <option value="478" class="selectf"  code="" >Pietų Afrikos Respublika </option>
+                <option value="477" class="selectf"  code="" >Somalis </option>
+                <option value="476" class="selectf"  code="" >Saliamono Salos </option>
+                <option value="475" class="selectf"  code="" >Slovėnija</option>
+                <option value="473" class="selectf"  code="" >Singapūras </option>
+                <option value="474" class="selectf"  code="" >Slovakija </option>
+                <option value="471" class="selectf"  code="" >Seišeliai</option>
+                <option value="472" class="selectf"  code="" >Siera Leonė</option>
+                <option value="470" class="selectf"  code="" >Serbija</option>
+                <option value="469" class="selectf"  code="" >Senegalas </option>
+                <option value="468" class="selectf"  code="" >Saudo Arabija </option>
+                <option value="466" class="selectf"  code="" >San Marinas </option>
+                <option value="465" class="selectf"  code="" >Samoa </option>
+                <option value="462" class="selectf"  code="" >St. Lucia </option>
+                <option value="458" class="selectf"  code="" >Rusija</option>
+                <option value="457" class="selectf"  code="" >Rumunija</option>
+                <option value="455" class="selectf"  code="" >Kataras </option>
+                <option value="454" class="selectf"  code="" >Puerto Rikas</option>
+                <option value="453" class="selectf"  code="" >Portugalija </option>
+                <option value="452" class="selectf"  code="" >Lenkija </option>
+                <option value="450" class="selectf"  code="" >Peru</option>
+                <option value="451" class="selectf"  code="" >Filipinai</option>
+                <option value="449" class="selectf"  code="" >Paragvajus</option>
+                <option value="447" class="selectf"  code="" >Panama</option>
+                <option value="448" class="selectf"  code="" >Papua Naujoji Gvinėja</option>
+                <option value="446" class="selectf"  code="" >Palestina </option>
+                <option value="445" class="selectf"  code="" >Palau </option>
+                <option value="444" class="selectf"  code="" >Pakistanas</option>
+                <option value="443" class="selectf"  code="" >Omanas</option>
+                <option value="442" class="selectf"  code="" >Norvegija </option>
+                <option value="438" class="selectf"  code="" >Nigerija</option>
+                <option value="437" class="selectf"  code="" >Nigeris </option>
+                <option value="436" class="selectf"  code="" >Nikaragva </option>
+                <option value="435" class="selectf"  code="" >Naujoji Zelandija</option>
+                <option value="431" class="selectf"  code="" >Olandija</option>
+                <option value="430" class="selectf"  code="" >Nepalas </option>
+                <option value="429" class="selectf"  code="" >Nauru </option>
+                <option value="428" class="selectf"  code="" >Namibija</option>
+                <option value="426" class="selectf"  code="" >Mozambikas</option>
+                <option value="425" class="selectf"  code="" >Marokas </option>
+                <option value="423" class="selectf"  code="" >Montenegro</option>
+                <option value="421" class="selectf"  code="" >Monakas </option>
+                <option value="422" class="selectf"  code="" >Mongolija </option>
+                <option value="419" class="selectf"  code="" >Havajų salos </option>
+                <option value="420" class="selectf"  code="" >Moldavija </option>
+                <option value="417" class="selectf"  code="" >Meksika </option>
+                <option value="415" class="selectf"  code="" >Mauricijus</option>
+                <option value="414" class="selectf"  code="" >Mauritanija </option>
+                <option value="412" class="selectf"  code="" >Maršalo salos</option>
+                <option value="411" class="selectf"  code="" >Malta</option>
+                <option value="409" class="selectf"  code="" >Maldyvai</option>
+                <option value="408" class="selectf"  code="" >Malaizija </option>
+                <option value="407" class="selectf"  code="" >Malavis </option>
+                <option value="406" class="selectf"  code="" >Madagaskaras</option>
+                <option value="405" class="selectf"  code="" >Makedonija</option>
+                <option value="403" class="selectf"  code="" >Liuksemburgas </option>
+                <option value="402" class="selectf"  code="" selected>Lietuva </option>
+                <option value="401" class="selectf"  code="" >Lichtenšteinas </option>
+                <option value="400" class="selectf"  code="" >Libija</option>
+                <option value="399" class="selectf"  code="" >Liberija</option>
+                <option value="398" class="selectf"  code="" >Lesotas </option>
+                <option value="397" class="selectf"  code="" >Libanas </option>
+                <option value="396" class="selectf"  code="" >Latvija </option>
+                <option value="395" class="selectf"  code="" >Laosas</option>
+                <option value="394" class="selectf"  code="" >Kirgizija </option>
+                <option value="393" class="selectf"  code="" >Kuveitas</option>
+                <option value="392" class="selectf"  code="" >Pietų Korėja</option>
+                <option value="391" class="selectf"  code="" >Šiaurės Korėja </option>
+                <option value="390" class="selectf"  code="" >Kiribatis </option>
+                <option value="389" class="selectf"  code="" >Kenija</option>
+                <option value="388" class="selectf"  code="" >Kazachstanas</option>
+                <option value="387" class="selectf"  code="" >Jordanija </option>
+                <option value="386" class="selectf"  code="" >Japonija</option>
+                <option value="385" class="selectf"  code="" >Jamaika </option>
+                <option value="384" class="selectf"  code="" >Italija</option>
+                <option value="383" class="selectf"  code="" >Izraelis</option>
+                <option value="379" class="selectf"  code="" >Irakas</option>
+                <option value="380" class="selectf"  code="" >Airija</option>
+                <option value="378" class="selectf"  code="" >Iranas</option>
+                <option value="371" class="selectf"  code="" >Indonezija</option>
+                <option value="370" class="selectf"  code="" >Indija</option>
+                <option value="369" class="selectf"  code="" >Islandija </option>
+                <option value="367" class="selectf"  code="" >Vengrija</option>
+                <option value="365" class="selectf"  code="" >Honduras</option>
+                <option value="364" class="selectf"  code="" >Haitis</option>
+                <option value="363" class="selectf"  code="" >Gajana</option>
+                <option value="362" class="selectf"  code="" >Gvinėja</option>
+                <option value="361" class="selectf"  code="" >Gvinėja Bisau</option>
+                <option value="360" class="selectf"  code="" >Gvatemala </option>
+                <option value="355" class="selectf"  code="" >Grenlandija </option>
+                <option value="354" class="selectf"  code="" >Graikija</option>
+                <option value="349" class="selectf"  code="" >Gana</option>
+                <option value="348" class="selectf"  code="" >Vokietija </option>
+                <option value="347" class="selectf"  code="" >Gruzija </option>
+                <option value="346" class="selectf"  code="" >Gambija </option>
+                <option value="341" class="selectf"  code="" >Prancūzija </option>
+                <option value="340" class="selectf"  code="" >Suomija </option>
+                <option value="335" class="selectf"  code="" >Estija</option>
+                <option value="336" class="selectf"  code="" >Etiopija</option>
+                <option value="334" class="selectf"  code="" >Eritrėja </option>
+                <option value="333" class="selectf"  code="" >Pusiaujo Gvinėja </option>
+                <option value="329" class="selectf"  code="" >Egiptas </option>
+                <option value="330" class="selectf"  code="" >Salvadoras</option>
+                <option value="328" class="selectf"  code="" >Ekvadoras </option>
+                <option value="326" class="selectf"  code="" >Rytų Timoras </option>
+                <option value="323" class="selectf"  code="" >Džibutis </option>
+                <option value="324" class="selectf"  code="" >Dominikos respublika</option>
+                <option value="321" class="selectf"  code="" >Danija</option>
+                <option value="320" class="selectf"  code="" >Čekija </option>
+                <option value="319" class="selectf"  code="" >Kipras</option>
+                <option value="316" class="selectf"  code="" >Kuba</option>
+                <option value="315" class="selectf"  code="" >Kroatija</option>
+                <option value="314" class="selectf"  code="" >Kosta Rika</option>
+                <option value="311" class="selectf"  code="" >Kongas</option>
+                <option value="309" class="selectf"  code="" >Kolumbija </option>
+                <option value="310" class="selectf"  code="" >Majotas </option>
+                <option value="306" class="selectf"  code="" >Kinija</option>
+                <option value="305" class="selectf"  code="" >Čilė</option>
+                <option value="303" class="selectf"  code="" >Čadas</option>
+                <option value="302" class="selectf"  code="" >Centrinės Afrikos Respublika </option>
+                <option value="299" class="selectf"  code="" >Kanada</option>
+                <option value="298" class="selectf"  code="" >Kamerūnas</option>
+                <option value="297" class="selectf"  code="" >Kambodža </option>
+                <option value="296" class="selectf"  code="" >Burundis</option>
+                <option value="294" class="selectf"  code="" >Bulgarija </option>
+                <option value="291" class="selectf"  code="" >Brazilija </option>
+                <option value="521" class="selectf"  code="" >Afganistanas</option>
+                <option value="781" class="selectf"  code="" >Kalėdų sala</option>
+              </select>
+            </p>
+            <p>
+              <label for="phone">
+                <span>Telefonas: </span>
+                <strong><abbr title="Privaloma užpildyti">*</abbr></strong>
+              </label>
+              <input type="text" id="phone" name="phone">
+            </p>
+            <p>
+              <label for="info">
+                <span>Papildoma informacija: </span>
+              </label>
+              <textarea name="info" id="info" cols="30" rows="10"></textarea>
             </p>
             <p>Prašome užpildyti visus pažymėtus laukus<strong><abbr title="Privaloma užpildyti">*</abbr></strong></p>
         </section>

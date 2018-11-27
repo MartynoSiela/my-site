@@ -41,6 +41,14 @@ input, textarea {
     border: 1px solid #999;
 }
 
+.left-input {
+    width: 195px;
+}
+
+.right-input {
+    width: 150px;
+}
+
 input[type=checkbox], input[type=radio] {
     width: auto;
     border: none;
@@ -51,6 +59,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
+
     vertical-align: top;
     height: 5em;
     resize: vertical;
@@ -68,11 +77,12 @@ button {
 }
 
 label {
-  position: relative;
+    position: relative;
 }
+  
 
 label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
+    position: absolute;
+    right: 5px;
+    top: 20px;
 }
