@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	width: 80%;
+	min-height: 100%;
+	margin: 0 auto;
+	font-size: 30px;
+}
+
+.test-class {
+	color:blue;
+}
+label span{
+	display: inline-block;
+	width: 100px;
+}
+table {
+	border: black solid 1px;
+	width: 500px;
+}
+
+table th, td {
+	border: black solid 1px;
+}
