@@ -1,180 +1,207 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Forma Nr.1</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div class="form">
-		<form method="post">
-			<h1>Registruotis</h1>
-			<hr>
-			<section>
-				<h2>Duomenų informacija</h2>
-				<div class="row">
-					<div class="row--left">
-						<label for="email">
-							<span>El. pašto adresas: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="email" id="email" name="email">
-					</div>
-				</div>
-				<div>
-				<div class="row">
-					<div class="row--left">
-						<label for="password">
-							<span>Slaptažodis: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="password" id="password" name="password">
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="password-repeat">
-							<span>Patvirtinti slaptažodį: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="password" id="password-repeat" name="password-repeat">
-					</div>
-				</div>
-			</section>
-			<section>
-				<h2>Pasitikrinkite sąskaitos adresą</h2>
-				<div class="row">
-					<div class="row--left">
-						<label for="sex">
-							<span>Lytis: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<select id="sex" name="sex">
-							<option value="female">Moteris</option>
-							<option value="male">Vyras</option>
-						</select>
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="name">
-							<span>Vardas: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="text" id="name" name="name">
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="surname">
-							<span>Pavardė: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="text" id="surname" name="surname">
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="street">
-							<span>Gatvė, namo(buto) nr.: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right row--street">
-						<div class="narrow--left">
-							<input type="text" name="street" id="street">
-						</div>
-						<div class="narrow--right">
-							<input type="text" name="house">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="postal">
-							<span>Pašto kodas: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right row--street">
-						<div class="narrow--left">
-							<input type="text" name="postal" id="postal">
-						</div>
-						<div class="narrow--right">
-							<a href="">Pašto kodo paieška </a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="city">
-							<span>Miestas: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="text" id="city" class="narrow--left" name="city">
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="country">
-							<span>Šalis: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<select name="country" id="country">
-							<option value="">test1</option>
-							<option value="">test2</option>
-						</select>
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="phone">
-							<span>Telefono numeris: </span>
-							<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-						</label>
-					</div>
-					<div class="row--right">
-						<input type="number" id="phone" name="phone">
-					</div>
-				</div>
-				<div class="row">
-					<div class="row--left">
-						<label for="phone">
-							<span>Papildoma informacija:</span>
-							<p>(Pavyzdžiui vartelių/durų kodas)</p>
-						</label>
-					</div>
-					<div class="row--right">
-						<textarea name="info" id="info" cols="30" rows="10"></textarea>
-					</div>
-				</div>
-				<div class="row--right">
-					<span>Prašome užpildyti visus pažymėtus laukus</span>
-					<strong><abbr title="Privaloma užpildyti">*</abbr></strong>
-				</div>
-			</section>
-			<section>
-				<div class="row--right submit">
-					<button type="submit">Registruotis</button>
-				</div>
-			</section>
-		</form>
-	</div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Forma Nr.1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form method="post">
+        <h1>Registruotis</h1>
+        <hr />
+        <table>
+          <tr class="row-header">
+            <td colspan="3"><h2>Duomenų informacija</h2></td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="email">
+                <span>El. pašto adresas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="email" name="email" id="email" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="password">
+                <span>Slaptažodis: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="password" name="password" id="password" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="password-repeat">
+                <span>Patvirtinti slaptažodį: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input
+                type="password"
+                name="password-repeat"
+                id="password-repeat"
+                required
+              />
+            </td>
+          </tr>
+          <tr class="row-consent">
+            <td></td>
+            <td colspan="2" class="column-input">
+              <input
+                class="consent"
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+              />
+              <label for="consent"><span>Sutinku su </span></label>
+              <a href="https://www.keliueismotaisykles.info/" target="_blank"
+                >taisyklėmis</a
+              >
+            </td>
+          </tr>
+          <tr class="row-header">
+            <td colspan="3"><h2>Pasitikrinkite sąskaitos adresą</h2></td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="sex">
+                <span>Lytis </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <select id="sex" name="sex" required>
+                <option disabled selected value>-</option>
+                <option value="female">Moteris</option>
+                <option value="male">Vyras</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="name">
+                <span>Vardas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="name" id="name" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="surname">
+                <span>Pavardė: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="surname" id="surname" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="street"> <span>Gatvė, </span> </label>
+              <label for="house">
+                <span>namo(buto) nr.: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td class="column-input-left">
+              <input type="text" name="street" id="street" required />
+            </td>
+            <td class="column-input-right">
+              <input type="text" name="house" id="house" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="postal">
+                <span>Pašto kodas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td class="column-input-left">
+              <input type="text" name="postal" id="postal" required />
+            </td>
+            <td class="column-input-right">
+              <a href="">Pašto kodo paieška </a>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="city">
+                <span>Miestas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="city" id="city" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="country">
+                <span>Šalis: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <select name="country" id="country" required>
+                <option disabled selected value>-</option>
+                <option value="">test1</option>
+                <option value="">test2</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="phone">
+                <span>Telefono numeris: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="phone" id="phone" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="info">
+                <span>Papildoma informacija:</span>
+                <p class="greytext">(Pavyzdžiui vartelių/durų kodas)</p>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <textarea name="info" id="info" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr class="row-required">
+            <td></td>
+            <td colspan="2" class="column-input">
+              <span class="greytext"
+                >Prašome užpildyti visus pažymėtus laukus</span
+              >
+              <span class="asterisk" title="Privaloma užpildyti">*</span>
+            </td>
+          </tr>
+          <tr class="row-submit">
+            <td></td>
+            <td colspan="2" class="column-input">
+              <button type="submit">Registruotis</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
 </html>
