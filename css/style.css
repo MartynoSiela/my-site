@@ -50,6 +50,26 @@ table {
 select,
 textarea {
   width: 100%;
+  border: 1px solid lightgrey;
+}
+
+.row {
+  height: 25px;
+}
+.row input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid grey;
+}
+
+.row input:valid:focus,
+select:valid:focus {
+  border: 1px solid green;
+}
+
+.row input:invalid:focus,
+select:invalid:focus {
+  border: 1px solid red;
 }
 
 .column-input-left {

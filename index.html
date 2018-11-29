@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="lt">
   <head>
     <meta charset="utf-8" />
     <title>Forma Nr.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
   </head>
   <body>
     <div class="container">
-      <form method="post">
+      <form method="post" onsubmit="return SubmitEvent()" novalidate>
         <h1>Registruotis</h1>
         <hr />
         <table>
@@ -22,7 +24,13 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="email" name="email" id="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -33,7 +41,13 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="password" name="password" id="password" required />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -48,6 +62,7 @@
                 type="password"
                 name="password-repeat"
                 id="password-repeat"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
               />
             </td>
@@ -94,7 +109,13 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="text" name="name" id="name" required />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]{1,}"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -105,7 +126,13 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="text" name="surname" id="surname" required />
+              <input
+                type="text"
+                name="surname"
+                id="surname"
+                pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]{1,}"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -131,10 +158,21 @@
               </label>
             </td>
             <td class="column-input-left">
-              <input type="text" name="postal" id="postal" required />
+              <input
+                type="text"
+                name="postal"
+                id="postal"
+                pattern="[0-9]{5}"
+                placeholder="12345"
+                required
+              />
             </td>
             <td class="column-input-right">
-              <a href="">Pašto kodo paieška </a>
+              <a
+                href="https://www.post.lt/lt/pagalba/pasto-kodu-paieska"
+                target="_blank"
+                >Pašto kodo paieška
+              </a>
             </td>
           </tr>
           <tr class="row">
@@ -171,7 +209,14 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="text" name="phone" id="phone" required />
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                pattern="[+]{1}[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{5}"
+                placeholder="+370 600 12345"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -203,5 +248,6 @@
         </table>
       </form>
     </div>
+    <script src="js/validation.js"></script>
   </body>
 </html>
