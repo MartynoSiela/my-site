@@ -46,6 +46,10 @@ table {
   width: 200px;
 }
 
+textarea {
+  resize: none;
+}
+
 .column-input input:not(.consent),
 select,
 textarea {
