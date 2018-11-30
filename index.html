@@ -47,6 +47,7 @@
                 name="password"
                 id="password"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -64,6 +65,7 @@
                 name="password-repeat"
                 id="password-repeat"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -76,6 +78,7 @@
                 type="checkbox"
                 id="consent"
                 name="consent"
+                oninput="this.setCustomValidity('')"
                 required
               />
               <label for="consent"><span>Sutinku su </span></label>
