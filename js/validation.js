@@ -11,6 +11,7 @@ var postal = document.getElementById("postal");
 var city = document.getElementById("city");
 var country = document.getElementById("country");
 var phone = document.getElementById("phone");
+var info = document.getElementById("info");
 
 var emailEmptyMessage = "Privaloma užpildyti šį lauką.";
 var passwordEmptyMessage = "Privaloma įvesti slaptažodį.";
@@ -77,3 +78,19 @@ validate(postal, postalEmptyMessage, postalWrongMessage);
 validateMissing(city, cityEmptyMessage);
 validateMissing(country, countryEmptyMessage);
 validate(phone, phoneEmptyMessage, phoneWrongMessage);
+
+function submitFunction() {
+  alert_string = "";
+  alert_string = alert_string + "elektroninis paštas: " + email.value + "\n";
+  alert_string = alert_string + "lytis :" + sex.value + "\n";
+  alert_string = alert_string + "vardas :" + userName.value + "\n";
+  alert_string = alert_string + "pavardė :" + surname.value + "\n";
+  alert_string = alert_string + "gatvė :" + street.value + "\n";
+  alert_string = alert_string + "namo numeris :" + house.value + "\n";
+  alert_string = alert_string + "pašto kodas :" + postal.value + "\n";
+  alert_string = alert_string + "miestas :" + city.value + "\n";
+  alert_string = alert_string + "šalis :" + country.value + "\n";
+  alert_string = alert_string + "telefono numeris :" + phone.value + "\n";
+  alert_string = alert_string + "papildoma informacija :" + info.value + "\n";
+  alert(alert_string);
+}
