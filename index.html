@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <form class="form" method="post" novalidate>
+      <form class="form" method="post">
         <h1>Registruotis</h1>
         <hr />
         <table>
@@ -29,6 +29,8 @@
                 name="email"
                 id="email"
                 pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                placeholder="adresas@svetaine.lt"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -242,7 +244,7 @@
           <tr class="row-submit">
             <td></td>
             <td colspan="2" class="column-input">
-              <button type="submit">Registruotis</button>
+              <button type="submit" id="submit-button">Registruotis</button>
             </td>
           </tr>
         </table>
