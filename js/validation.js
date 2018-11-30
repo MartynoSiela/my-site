@@ -1,107 +1,79 @@
-// var form = document.getElementsByClassName("form");
-
-// form.submit(function(evt) {
-//   evt.preventDefault();
-//   //   alert("Coming soon...");
-// });
-
 var email = document.getElementById("email");
 var psw = document.getElementById("password");
 var pswRepeat = document.getElementById("password-repeat");
 var consent = document.getElementById("consent");
+var sex = document.getElementById("sex");
+var userName = document.getElementById("name");
+var surname = document.getElementById("surname");
+var street = document.getElementById("street");
+var house = document.getElementById("house");
+var postal = document.getElementById("postal");
+var city = document.getElementById("city");
+var country = document.getElementById("country");
+var phone = document.getElementById("phone");
 
-email.addEventListener(
-  "invalid",
-  function() {
-    if (email.validity.valueMissing) {
-      email.setCustomValidity("Privaloma užpildyti šį lauką.");
-    }
-  },
-  false
-);
+var emailEmptyMessage = "Privaloma užpildyti šį lauką.";
+var passwordEmptyMessage = "Privaloma įvesti slaptažodį.";
+var consentEmptyMessage = "Privaloma pažymėti, kad sutinkate su taisyklėmis.";
+var sexEmptyMessage = "Privaloma pasirinkti lytį.";
+var userNameEmptyMessage = "Privaloma įvesti savo vardą.";
+var surnameEmptyMessage = "Privaloma įvesti savo pavardę.";
+var streetEmptyMessage = "Privaloma įvesti gatvės pavadinimą.";
+var houseEmptyMessage = "Privaloma įvesti namo numerį.";
+var postalEmptyMessage = "Privaloma įvesti pašto kodą.";
+var cityEmptyMessage = "Privaloma įvesti miestą.";
+var countryEmptyMessage = "Privaloma pasirinkti šalį.";
+var phoneEmptyMessage = "Privaloma įvesti telefono numerį.";
 
-email.addEventListener(
-  "input",
-  function(e) {
-    if (!email.validity.valid) {
-      email.setCustomValidity(
-        "Netinkamas elektroninio pašto adreso formatas. Pavyzdys: adresas@svetaine.lt"
-      );
-    }
-  },
-  false
-);
+var emailWrongMessage =
+  "Netinkamas elektroninio pašto adreso formatas. Pavyzdys: adresas@svetaine.lt";
+var passwordWrongMessage =
+  "Slaptažodis turi būti: bent 8 simbolių ilgio, turėti bent po vieną iš skaičių, didžiųjų ir mažųjų raidžių.";
+var userNameWrongMessage = "Vardui galima naudoti tik raides.";
+var surnameWrongMessage = "Pavardei galima naudoti tik raides.";
+var postalWrongMessage = "Pašto kodą sudaro 5 skaitmenys.";
+var phoneWrongMessage =
+  "Prašome įvesti telefono numerį pagal pateiktą formatą: +370 600 12345";
 
-psw.addEventListener(
-  "invalid",
-  function() {
-    if (psw.validity.valueMissing) {
-      psw.setCustomValidity("Privaloma užpildyti šį lauką.");
-    }
-  },
-  false
-);
+function validateWrong(element, messageWrong) {
+  element.addEventListener(
+    "input",
+    function(e) {
+      if (!element.validity.valid) {
+        element.setCustomValidity(messageWrong);
+      }
+    },
+    false
+  );
+}
 
-psw.addEventListener(
-  "input",
-  function(e) {
-    if (!psw.validity.valid) {
-      psw.setCustomValidity(
-        "Slaptažodis turi būti: bent 8 simbolių ilgio, turėti bent po vieną iš skaičių, didžiųjų ir mažųjų raidžių."
-      );
-    }
-  },
-  false
-);
+function validateMissing(element, messageEmpty) {
+  element.addEventListener(
+    "invalid",
+    function() {
+      if (element.validity.valueMissing) {
+        element.setCustomValidity(messageEmpty);
+      }
+    },
+    false
+  );
+}
 
-pswRepeat.addEventListener(
-  "invalid",
-  function() {
-    if (pswRepeat.validity.valueMissing) {
-      pswRepeat.setCustomValidity("Privaloma užpildyti šį lauką.");
-    }
-  },
-  false
-);
+function validate(element, messageEmpty, messageWrong) {
+  validateMissing(element, messageEmpty);
+  validateWrong(element, messageWrong);
+}
 
-pswRepeat.addEventListener(
-  "input",
-  function(e) {
-    if (!pswRepeat.validity.valid) {
-      pswRepeat.setCustomValidity(
-        "Slaptažodis turi būti: bent 8 simbolių ilgio, turėti bent po vieną iš skaičių, didžiųjų ir mažųjų raidžių."
-      );
-    }
-  },
-  false
-);
-
-consent.addEventListener(
-  "invalid",
-  function() {
-    if (consent.validity.valueMissing) {
-      consent.setCustomValidity(
-        "Privaloma pažymėti, kad sutinkate su taisyklėmis."
-      );
-    }
-  },
-  false
-);
-
-// const signUpForm = document.getElementsByClassName("form");
-// const emailField = document.getElementById("email");
-// const okButton = document.getElementById("submit-button");
-
-// emailField.addEventListener("keyup", function(event) {
-//   isValidEmail = emailField.checkValidity();
-
-//   if (isValidEmail) {
-//     okButton.disabled = false;
-//   } else {
-//     okButton.disabled = true;
-//   }
-// });
-
-// okButton.addEventListener("click", function(event) {
-//   signUpForm.submit();
-// });
+validate(email, emailEmptyMessage, emailWrongMessage);
+validate(psw, passwordEmptyMessage, passwordWrongMessage);
+validate(pswRepeat, passwordEmptyMessage, passwordWrongMessage);
+validateMissing(consent, consentEmptyMessage);
+validateMissing(sex, sexEmptyMessage);
+validate(userName, userNameEmptyMessage, userNameWrongMessage);
+validate(surname, surnameEmptyMessage, surnameWrongMessage);
+validateMissing(street, streetEmptyMessage);
+validateMissing(house, houseEmptyMessage);
+validate(postal, postalEmptyMessage, postalWrongMessage);
+validateMissing(city, cityEmptyMessage);
+validateMissing(country, countryEmptyMessage);
+validate(phone, phoneEmptyMessage, phoneWrongMessage);

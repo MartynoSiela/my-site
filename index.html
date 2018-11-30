@@ -5,6 +5,7 @@
     <title>Forma Nr.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.3.1.js"></script>
   </head>
   <body>
     <div class="container">
@@ -98,7 +99,12 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <select id="sex" name="sex" required>
+              <select
+                id="sex"
+                name="sex"
+                oninput="this.setCustomValidity('')"
+                required
+              >
                 <option disabled selected value>-</option>
                 <option value="female">Moteris</option>
                 <option value="male">Vyras</option>
@@ -118,6 +124,7 @@
                 name="name"
                 id="name"
                 pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]{1,}"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -135,6 +142,7 @@
                 name="surname"
                 id="surname"
                 pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]{1,}"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -148,10 +156,22 @@
               </label>
             </td>
             <td class="column-input-left">
-              <input type="text" name="street" id="street" required />
+              <input
+                type="text"
+                name="street"
+                id="street"
+                oninput="this.setCustomValidity('')"
+                required
+              />
             </td>
             <td class="column-input-right">
-              <input type="text" name="house" id="house" required />
+              <input
+                type="text"
+                name="house"
+                id="house"
+                oninput="this.setCustomValidity('')"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -168,6 +188,7 @@
                 id="postal"
                 pattern="[0-9]{5}"
                 placeholder="12345"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
@@ -187,7 +208,13 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <input type="text" name="city" id="city" required />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                oninput="this.setCustomValidity('')"
+                required
+              />
             </td>
           </tr>
           <tr class="row">
@@ -198,7 +225,12 @@
               </label>
             </td>
             <td colspan="2" class="column-input">
-              <select name="country" id="country" required>
+              <select
+                name="country"
+                id="country"
+                oninput="this.setCustomValidity('')"
+                required
+              >
                 <option disabled selected value>-</option>
                 <option value="">test1</option>
                 <option value="">test2</option>
@@ -219,6 +251,7 @@
                 id="phone"
                 pattern="[+]{1}[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{5}"
                 placeholder="+370 600 12345"
+                oninput="this.setCustomValidity('')"
                 required
               />
             </td>
