@@ -1,10 +1,9 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  background: rgba(32, 178, 170, 0.3);
-}
+  background: rgba(32, 178, 170, 0.3); }
+
 .container {
   margin: 0 auto;
   margin-top: 30px;
@@ -14,87 +13,73 @@ body {
   background: white;
   border-radius: 1em;
   font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
 
 h1 {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 h1,
 h2 {
   padding: 5px 0px 10px 0px;
   margin: 0;
-  font-weight: normal;
-}
+  font-weight: normal; }
+
+td {
+  vertical-align: middle; }
 
 .asterisk {
-  color: red;
-}
+  color: red; }
 
 .greytext {
-  color: grey;
-}
+  color: grey; }
 
 button {
   background: grey;
   color: white;
   border: 1px solid grey;
   border-radius: 5px;
-  padding: 5px 10px 5px 10px;
-}
+  padding: 5px 10px 5px 10px; }
 
 table {
-  width: 100%;
-}
+  width: 100%; }
 
 .column-label {
-  width: 160px;
-}
+  width: 160px; }
 
 textarea {
-  resize: none;
-}
+  resize: none; }
 
 .column-input input:not(.consent),
 select,
 textarea {
   width: 100%;
-  border: 1px solid lightgrey;
-}
+  border: 1px solid lightgrey; }
 
 .row {
-  height: 25px;
-}
+  height: 25px; }
 
 input,
 select {
-  height: 20px;
-}
+  height: 20px; }
+
 .column-label input:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid grey;
-}
+  border: 1px solid grey; }
 
 .row input:valid:focus,
 select:valid:focus {
-  border: 1px solid green;
-}
+  border: 1px solid green; }
 
 .row input:invalid:focus,
 select:invalid:focus {
-  border: 1px solid red;
-}
+  border: 1px solid red; }
 
 .column-input-left {
-  width: 160px;
-}
+  width: 160px; }
 
 .column-input-left input {
-  width: 100%;
-}
+  width: 100%; }
 
 .column-input-right input {
-  width: 100%;
-}
+  width: 100%; }

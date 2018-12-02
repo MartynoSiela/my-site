@@ -4,7 +4,8 @@
   "description": "description",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Chateux1/my-site#readme",
   "devDependencies": {
     "or": "^0.2.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.10.0"
   }
 }
