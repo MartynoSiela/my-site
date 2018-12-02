@@ -15,14 +15,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 1em; }
 
-h1 {
-  text-transform: uppercase; }
-
 h1,
 h2 {
   padding: 5px 0px 10px 0px;
   margin: 0;
   font-weight: normal; }
+
+h1 {
+  text-transform: uppercase; }
 
 .asterisk {
   color: red; }
@@ -30,47 +30,38 @@ h2 {
 .greytext {
   color: grey; }
 
-button {
-  background: grey;
-  color: white;
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 5px 10px 5px 10px; }
+input,
+select {
+  height: 20px;
+  border: 1px solid lightgrey; }
+  input:not(.consent),
+  select:not(.consent) {
+    width: 100%; }
+  input:focus,
+  select:focus {
+    border: 1px solid grey; }
+  input:valid:focus,
+  select:valid:focus {
+    border: 1px solid green; }
+  input:invalid:focus,
+  select:invalid:focus {
+    border: 1px solid red; }
+
+textarea {
+  width: 100%;
+  border: 1px solid lightgrey;
+  resize: none; }
+  textarea:focus {
+    border: 1px solid grey; }
 
 table {
   width: 100%; }
 
-.column-label {
-  width: 160px; }
-
-textarea {
-  resize: none; }
-
-input:not(.consent),
-select,
-textarea {
-  width: 100%;
-  border: 1px solid lightgrey; }
-
 .row {
   height: 25px; }
 
-input,
-select {
-  height: 20px; }
-
-input:focus,
-select:focus,
-textarea:focus {
-  border: 1px solid grey; }
-
-input:valid:focus,
-select:valid:focus {
-  border: 1px solid green; }
-
-input:invalid:focus,
-select:invalid:focus {
-  border: 1px solid red; }
+.column-label {
+  width: 160px; }
 
 .column-input-left {
   width: 160px; }
