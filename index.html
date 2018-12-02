@@ -73,19 +73,27 @@
           </tr>
           <tr class="row-consent">
             <td></td>
-            <td colspan="2" class="column-input">
-              <input
-                class="consent"
-                type="checkbox"
-                id="consent"
-                name="consent"
-                oninput="this.setCustomValidity('')"
-                required
-              />
-              <label for="consent"><span>Sutinku su </span></label>
-              <a href="https://www.keliueismotaisykles.info/" target="_blank"
-                >taisyklėmis</a
-              >
+            <td colspan="2" class="column-input col-consent">
+              <div class="column-consent">
+                <input
+                  class="consent"
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  oninput="this.setCustomValidity('')"
+                  required
+                />
+              </div>
+              <div class="column-consent">
+                <label for="consent"
+                  ><span>Sutinku su </span>
+                  <a
+                    href="https://www.keliueismotaisykles.info/"
+                    target="_blank"
+                    >taisyklėmis</a
+                  >
+                </label>
+              </div>
             </td>
           </tr>
           <tr class="row-header">
@@ -123,7 +131,7 @@
                 type="text"
                 name="name"
                 id="name"
-                pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]{1,}"
+                pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ.\- ]{1,}"
                 oninput="this.setCustomValidity('')"
                 required
               />

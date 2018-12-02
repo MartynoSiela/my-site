@@ -24,9 +24,6 @@ h2 {
   margin: 0;
   font-weight: normal; }
 
-td {
-  vertical-align: middle; }
-
 .asterisk {
   color: red; }
 
@@ -49,7 +46,7 @@ table {
 textarea {
   resize: none; }
 
-.column-input input:not(.consent),
+input:not(.consent),
 select,
 textarea {
   width: 100%;
@@ -62,24 +59,45 @@ input,
 select {
   height: 20px; }
 
-.column-label input:focus,
+input:focus,
 select:focus,
 textarea:focus {
   border: 1px solid grey; }
 
-.row input:valid:focus,
+input:valid:focus,
 select:valid:focus {
   border: 1px solid green; }
 
-.row input:invalid:focus,
+input:invalid:focus,
 select:invalid:focus {
   border: 1px solid red; }
 
 .column-input-left {
   width: 160px; }
 
-.column-input-left input {
+.column-input-left > input {
   width: 100%; }
 
-.column-input-right input {
+.column-input-right > input {
   width: 100%; }
+
+.column-consent > input,
+.column-consent > label {
+  margin: 0px;
+  padding: 0px;
+  height: 25px;
+  vertical-align: middle; }
+
+.column-consent {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+  vertical-align: middle; }
+
+.col-consent {
+  margin-left: 0px;
+  padding-left: 0px; }
+
+.column-consent > input {
+  margin: 0px;
+  padding: 0px; }
