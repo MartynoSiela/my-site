@@ -2,18 +2,18 @@
   box-sizing: border-box; }
 
 body {
-  background: rgba(32, 178, 170, 0.3); }
-
-.container {
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 500px;
-  padding: 1em;
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 1em;
+  background: rgba(32, 178, 170, 0.3);
   font-size: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+
+.container {
+  background: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 1em;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 1em; }
 
 h1 {
   text-transform: uppercase; }
@@ -74,30 +74,19 @@ select:invalid:focus {
 
 .column-input-left {
   width: 160px; }
-
-.column-input-left > input {
-  width: 100%; }
+  .column-input-left > input {
+    width: 100%; }
 
 .column-input-right > input {
   width: 100%; }
 
-.column-consent > input,
-.column-consent > label {
-  margin: 0px;
-  padding: 0px;
-  height: 25px;
-  vertical-align: middle; }
-
 .column-consent {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-  vertical-align: middle; }
+  display: inline; }
+  .column-consent > input,
+  .column-consent label {
+    margin: 0px;
+    height: 20px;
+    vertical-align: middle; }
 
-.col-consent {
-  margin-left: 0px;
+.column-input:has(.column-consent) {
   padding-left: 0px; }
-
-.column-consent > input {
-  margin: 0px;
-  padding: 0px; }
