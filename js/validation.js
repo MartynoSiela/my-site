@@ -60,6 +60,15 @@ function validateMissing(element, messageEmpty) {
   );
 }
 
+function validatePasswordMatch() {
+  validate(pswRepeat, passwordEmptyMessage, passwordWrongMessage);
+  pswRepeat.addEventListener("input", function(e) {
+    if (psw.value != pswRepeat.value) {
+      pswRepeat.setCustomValidity("Slaptažodžiai nesutampa");
+    }
+  });
+}
+
 function validate(element, messageEmpty, messageWrong) {
   validateMissing(element, messageEmpty);
   validateWrong(element, messageWrong);
@@ -67,7 +76,8 @@ function validate(element, messageEmpty, messageWrong) {
 
 validate(email, emailEmptyMessage, emailWrongMessage);
 validate(psw, passwordEmptyMessage, passwordWrongMessage);
-validate(pswRepeat, passwordEmptyMessage, passwordWrongMessage);
+// validate(pswRepeat, passwordEmptyMessage, passwordWrongMessage);
+validatePasswordMatch();
 validateMissing(consent, consentEmptyMessage);
 validateMissing(sex, sexEmptyMessage);
 validate(userName, userNameEmptyMessage, userNameWrongMessage);
