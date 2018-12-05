@@ -32,9 +32,9 @@ var passwordWrongMessage =
   "Slaptažodis turi būti: bent 8 simbolių ilgio, turėti bent po vieną iš skaičių, didžiųjų ir mažųjų raidžių.";
 var userNameWrongMessage = "Vardui galima naudoti tik raides.";
 var surnameWrongMessage = "Pavardei galima naudoti tik raides.";
-var postalWrongMessage = "Pašto kodą sudaro 5 skaitmenys.";
+var postalWrongMessage = "Pašto kodą sudaro bent 5 skaitmenys.";
 var phoneWrongMessage =
-  "Prašome įvesti telefono numerį pagal pateiktą formatą: +370 600 12345";
+  "Prašome įvesti telefono numerį pagal pateiktą formatą: +37060012345";
 
 function validateWrong(element, messageWrong) {
   element.addEventListener(
@@ -85,12 +85,12 @@ validate(surname, surnameEmptyMessage, surnameWrongMessage);
 validateMissing(street, streetEmptyMessage);
 validateMissing(house, houseEmptyMessage);
 validate(postal, postalEmptyMessage, postalWrongMessage);
-validateMissing(city, cityEmptyMessage);
 validateMissing(country, countryEmptyMessage);
+validateMissing(city, cityEmptyMessage);
 validate(phone, phoneEmptyMessage, phoneWrongMessage);
 
 function submitFunction() {
-  alert_string = "";
+  let alert_string = "";
   alert_string = alert_string + "elektroninis paštas: " + email.value + "\n";
   alert_string = alert_string + "lytis :" + sex.value + "\n";
   alert_string = alert_string + "vardas :" + userName.value + "\n";
@@ -104,3 +104,6 @@ function submitFunction() {
   alert_string = alert_string + "papildoma informacija :" + info.value + "\n";
   alert(alert_string);
 }
+
+shit = document.getElementById("output");
+shit = $("#output");
